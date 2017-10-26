@@ -13,10 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.abhi.bottomsheet.BottomSheet.BottomSheetItemObject;
 import com.example.abhi.bottomsheet.BottomSheet.BottomSheetRecyclerViewAdapter;
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
     private GridLayoutManager lLayout;
     private Button buybut;
     private ViewPager mViewPager;
+
+    Toolbar toolbar;
+
 
     private PersonDatabaseHelper databaseHelper;
 
@@ -97,6 +102,21 @@ public class MainActivity extends AppCompatActivity {
         transcard=(CardView)findViewById(R.id.transcard);
 
         buybut=(Button)findViewById(R.id.buybut) ;
+
+        toolbar=(Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle("Project GI");
+
+        toolbar.setNavigationIcon(R.drawable.ic_home_black_24dp);
+        toolbar.setNavigationContentDescription("Nothing");
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"Sup?",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        setSupportActionBar(toolbar);
 
 
         List<BottomSheetItemObject> rowListItem = getAllItemList();

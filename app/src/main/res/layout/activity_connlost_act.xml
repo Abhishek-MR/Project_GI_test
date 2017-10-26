@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:dp_buttonText="retry"
-        app:dp_message="Use this nice placeholder if you have nothing to show"
+        app:dp_message="Desert. Void. Nothingness. We are starting to miss the internet. :("
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp" />
 
