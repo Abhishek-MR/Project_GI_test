@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     TextView swipe;
     ImageView swipebut;
     CardView maincard,quotecard,homecard,transcard;
+    Toolbar toolbar;
     private GridLayoutManager lLayout;
     private Button buybut;
     private ViewPager mViewPager;
@@ -189,6 +190,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,TransAct.class));
             }
         });
+
+
 
 
         //services
